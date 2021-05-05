@@ -1,7 +1,7 @@
 ---
 title: Dependency Inversion Principle in JavaScript and TypeScript
 path: /dependency-inversion-principle
-date: 2021-04-23
+date: 2020-01-15
 summary: Interface Segregation Principle in the context of JavaScript and TypeScript.
 tags: ["JavaScript", "Software Design"]
 ---
