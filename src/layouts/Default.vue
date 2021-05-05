@@ -10,6 +10,7 @@
             @click="toggle"
             class="flex items-center px-3 py-2 border rounded border-gray-500 hover:text-gray-600 hover:border-gray-600"
             data-cypress="hamburger"
+            title="menu"
           >
             <svg
               class="current-color h-3 w-3"
@@ -82,6 +83,7 @@
             <a
               href="mailto:carsten.behrens1@gmail.com"
               class="text-white hover:text-gray-400"
+              title="Email"
             >
               <svg
                 width="25"
@@ -102,6 +104,7 @@
               href="https://github.com/carstenbehrens"
               target="_blank"
               class="text-white hover:text-gray-400"
+              title="Github"
             >
               <svg
                 width="20"
@@ -122,6 +125,7 @@
               href="https://twitter.com/cabe_mono"
               target="_blank"
               class="text-white hover:text-gray-400"
+              title="Twitter"
             >
               <svg
                 width="20"
