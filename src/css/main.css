@@ -26,11 +26,11 @@
 }
 
 .theme-light .search-highlighted {
-  background: #f0fff4;
+  background: #dbeafe;
 }
 
 .theme-light .search-hover:hover {
-  background: #f0fff4;
+  background: #bfdbfe;
 }
 
 .theme-dark .markdown-body {
