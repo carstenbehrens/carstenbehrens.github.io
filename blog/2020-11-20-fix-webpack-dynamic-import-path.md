@@ -35,9 +35,9 @@ In my case, this would be "/public/\_\_assets".
 If you leave this blank **it defaults to "/"** meaning that the browser would try
 to find the requested Javascript file under /[chunkname].js
 
-![script-tag](script-tag.jpg)
+![script-tag](./images/script-tag.jpg)
 
 If the browser cannot find this file you will see the error:
 Uncaught (in promise) ChunkLoadError: Loading chunk failed.
 
-![error](error.jpg)
+![error](./images/error.jpg)
