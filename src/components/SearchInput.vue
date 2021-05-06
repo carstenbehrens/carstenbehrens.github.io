@@ -89,6 +89,9 @@ query Search {
         path
         title
         summary
+        tags {
+          title
+        }
         headings {
           depth
           value
@@ -116,6 +119,7 @@ export default {
           path: page.path,
           title: page.title,
           summary: page.summary,
+          tags: page.tags.map((tag) => tag.title).join(" "),
         });
       });
       return result;
@@ -135,7 +139,7 @@ export default {
         distance: 500,
         maxPatternLength: 32,
         minMatchCharLength: 1,
-        keys: ["title", "summary"],
+        keys: ["title", "summary", "tags"],
       },
     };
   },
