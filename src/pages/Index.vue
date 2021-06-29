@@ -26,7 +26,7 @@
               />
             </div>
             <h1 class="sm:ml-8 text-2xl font-bold sm:ml-6">
-              Hi 👋, I'm Carsten Behrens
+              Hi, I'm Carsten Behrens
             </h1>
           </div>
           <p class="flex-1 text-lg sm:text-xl sm:ml-6 pb-8">
