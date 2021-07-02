@@ -24,6 +24,7 @@ module.exports = function(api, options) {
     }
   });
 
+  // Create searchData.json
   api.afterBuild(() => {
     fs.writeFile(
       "./static/searchData.json",
