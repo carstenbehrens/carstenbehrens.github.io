@@ -30,9 +30,9 @@ I'll try to answer all of these and some other questions here.
 ## CLEARLY UNCLEAR
 
 The truth is, that the term is not clearly defined, there are too many opinions of
-what the definition of business logic is, and it's often way easier to understand the term context.
+what the definition of business logic is, and it's often way easier to understand the term in context.
 
-Now it seems like I am not the only one that is confused by this term, as even the
+Now it seems like I am not the only one that is confused by this term, as even the [definition](https://wiki.c2.com/?BusinessLogicDefinition) on WikiWikiWeb is a hot mess.
 
 The best way to explain business logic is by using an example.
 
