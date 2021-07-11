@@ -10,8 +10,7 @@ If you just want to get straight to the point, here is the [TLDR](#1).
 
 After installing programs on Linux you'll often find that you cannot execute them from your terminal.
 
-I had this issue after installing httpie on my Linux system. Here is the error message I saw when trying to start
-http from the terminal.
+I had this issue after installing [httpie](https://httpie.io/) on my Linux system. Here is the error message I saw when trying to start http from the terminal.
 
 ```bash
 zsh: command not found: http
