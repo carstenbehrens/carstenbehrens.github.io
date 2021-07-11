@@ -28,7 +28,7 @@ module.exports = function(api, options) {
   api.afterBuild(() => {
     fs.writeFile(
       "./static/searchData.json",
-      JSON.stringify(searchData),
+      JSON.stringify(sortSearchData(searchData)),
       (err) => {
         if (err) {
           console.error(err);
@@ -37,4 +37,21 @@ module.exports = function(api, options) {
       }
     );
   });
+};
+
+// Sort the blog posts so we don't get new search data with every build.
+const sortSearchData = (searchData) => {
+  function compare(a, b) {
+    if (a.length < b.length) {
+      return -1;
+    }
+    if (a.length > b.length) {
+      return 1;
+    }
+    return 0;
+  }
+
+  return {
+    posts: searchData.posts.sort((a, b) => compare(a.title, b.title)),
+  };
 };
