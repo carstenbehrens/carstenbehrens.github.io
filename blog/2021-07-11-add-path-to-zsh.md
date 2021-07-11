@@ -2,6 +2,7 @@
 title: How to add a path to zsh or bash on Linux
 path: /how-to-add-path-to-zsh-or-bash-on-linux
 date: 2021-07-11
+summary: How to fix the command not found on Linux.
 tags: ["Linux"]
 ---
 
