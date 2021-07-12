@@ -7,20 +7,21 @@ const fs = require("fs");
 // To restart press CTRL + C in terminal and run `gridsome develop`
 module.exports = function(api, options) {
   const searchData = {
-    posts: [],
-  };
+    data: []
+  }
 
   api.loadSource((store) => {});
 
   api.onCreateNode((options) => {
     if (options.internal.typeName === "Post") {
-      const { title, summary, tags } = options;
+      const { title, summary, tags, path } = options;
       const post = {
+        path,
         title,
         summary,
         tags,
       };
-      searchData.posts.push(post);
+      searchData.data.push(post);
     }
   });
 
@@ -52,6 +53,6 @@ const sortSearchData = (searchData) => {
   }
 
   return {
-    posts: searchData.posts.sort((a, b) => compare(a.title, b.title)),
+    data: searchData.data.sort((a, b) => compare(a.title, b.title)),
   };
 };
