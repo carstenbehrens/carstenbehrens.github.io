@@ -75,7 +75,7 @@ add an interface between the two classes.
 
 Afterward, the flow of control should look like this:
 
-![diagram](blog/images/flow-of-control-2.jpg)
+![diagram](./images/flow-of-control-3.jpg)
 
 And the code:
 
