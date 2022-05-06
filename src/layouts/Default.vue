@@ -37,7 +37,7 @@
           </li>
           <li>
             <g-link to="/" class="text-copy-primary hover:text-gray-600"
-              >About</g-link
+              >Home</g-link
             >
           </li>
           <li>

@@ -70,10 +70,6 @@
   color: #cbd5e0;
 }
 
-.theme-dark nav .active {
-  @apply border-white border-b;
-}
-
 .content-wrapper {
   transition: background-color 0.25s;
 }
@@ -93,11 +89,6 @@ a {
 
 a:hover {
   color: var(--link-secondary);
-}
-
-nav .active {
-  font-weight: bold;
-  @apply border-black border-b;
 }
 
 .container-inner {
