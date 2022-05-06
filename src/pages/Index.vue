@@ -34,10 +34,10 @@
             I publish articles mostly focused on web development.
           </p>
           <p class="flex-1 text-lg sm:text-xl sm:ml-6 font-bold">
-            You can reach out to me using my email:
+            You can reach out to me here:
           </p>
           <p class="flex-1 text-lg sm:text-xl sm:ml-6 font-bold">
-            carsten.behrens1@gmail.com
+            carsten@carstenbehrens.com
           </p>
         </div>
       </div>
