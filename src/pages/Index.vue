@@ -34,7 +34,7 @@
             I publish articles mostly focused on web development.
           </p>
           <p class="flex-1 text-lg sm:text-xl sm:ml-6 font-bold">
-            You can reach out to me here at <a href="mailto:carsten@carstenbehrens.com">carsten@carstenbehrens.com</a>.
+            You can reach out to me at <a href="mailto:carsten@carstenbehrens.com">carsten@carstenbehrens.com</a>.
           </p>
           <br/>
           <p class="flex-1 text-lg sm:text-xl sm:ml-6 font-bold">
