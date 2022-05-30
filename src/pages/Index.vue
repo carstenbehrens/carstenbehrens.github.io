@@ -30,14 +30,15 @@
             </h1>
           </div>
           <p class="flex-1 text-lg sm:text-xl sm:ml-6 pb-8">
-            I help people create websites and web-applications. On this website
+            I help people create websites and web-applications. <br/> On this website
             I publish articles mostly focused on web development.
           </p>
           <p class="flex-1 text-lg sm:text-xl sm:ml-6 font-bold">
-            You can reach out to me here:
+            You can reach out to me here at <a href="mailto:carsten@carstenbehrens.com">carsten@carstenbehrens.com</a>.
           </p>
+          <br/>
           <p class="flex-1 text-lg sm:text-xl sm:ml-6 font-bold">
-            carsten@carstenbehrens.com
+            You find my resume <a href="/resume.pdf" target="_blank">here</a>.
           </p>
         </div>
       </div>
