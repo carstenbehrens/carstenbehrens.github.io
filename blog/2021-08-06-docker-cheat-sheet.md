@@ -1,7 +1,7 @@
 ---
 title: Docker Cheat Sheet
 path: /docker-cheat-sheet
-date: 2021-08-06
+date: 2022-11-29
 tags: ["Docker"]
 ---
 
@@ -32,6 +32,11 @@ Kill a container
 docker kill NAME
 ```
 
+Debug a running container (starts /bin/sh inside the running container)
+```sh
+docker exec -it CONTAINER_ID /bin/sh
+```
+
 ## Images
 
 Show all images
@@ -54,4 +59,19 @@ Run container with following settings:
 
 ```sh
 docker run -d --name dy -p 8002:8000 amazon/dynamodb-local
+```
+
+Run a docker container interactivley
+```sh
+docker run -it ubuntu
+```
+
+## Dockerfile
+
+Dockerfiles can be used to build images.
+
+To create an image from the dockerfile in our current directory.
+
+```sh
+docker build -t NAME_OF_IMAGE .
 ```
