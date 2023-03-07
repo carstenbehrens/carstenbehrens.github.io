@@ -38,7 +38,7 @@
           </p>
           <br/>
           <p class="flex-1 text-lg sm:text-xl sm:ml-6 font-bold">
-            You find my resume <a href="/resume.pdf" target="_blank">here</a>.
+            You find my resume here: <a href="/carsten_behrens_deutsch_cv.pdf" target="_blank">german</a> / <a href="/carsten_behrens_englisch_cv.pdf" target="_blank">english</a>.
           </p>
         </div>
       </div>
