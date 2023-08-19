@@ -36,10 +36,6 @@
           <p class="flex-1 text-lg sm:text-xl sm:ml-6 font-bold">
             You can reach out to me at <a href="mailto:carsten@carstenbehrens.com">carsten@carstenbehrens.com</a>.
           </p>
-          <br/>
-          <p class="flex-1 text-lg sm:text-xl sm:ml-6 font-bold">
-            You find my resume here: <a href="/carsten_behrens_deutsch_cv.pdf" target="_blank">german</a> / <a href="/carsten_behrens_englisch_cv.pdf" target="_blank">english</a>.
-          </p>
         </div>
       </div>
       <!-- end get-to-know me -->
