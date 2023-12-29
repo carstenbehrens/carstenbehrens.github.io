@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>Summary of &quot;A Philosophy of Software Design&quot; by John Ousterhout - Carsten Behrens Blog</title><meta name="gridsome:hash" content="0114f84967cb0b95868f9577864552a4a8872f0e"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.23"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><meta data-vue-tag="ssr" name="keywords" content="Vue,React,JavaScript,TypeScript,Vue.js,VueJS"><meta data-vue-tag="ssr" name="description" content="Carsten Behrens Blog"><meta data-vue-tag="ssr" name="author" content="Carsten Behrens"><meta data-vue-tag="ssr" data-key="description" name="description" content="A Blog about JavaScript and Web Development"><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/assets/static/favicon.ce0531f.0191dfca28960a65c4efbd1d6c4f782a.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/assets/static/favicon.ac8d93a.0191dfca28960a65c4efbd1d6c4f782a.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="/assets/static/favicon.b9532cc.0191dfca28960a65c4efbd1d6c4f782a.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="76x76" href="/assets/static/favicon.f22e9f3.0191dfca28960a65c4efbd1d6c4f782a.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="152x152" href="/assets/static/favicon.62d22cb.0191dfca28960a65c4efbd1d6c4f782a.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="120x120" href="/assets/static/favicon.1539b60.0191dfca28960a65c4efbd1d6c4f782a.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="167x167" href="/assets/static/favicon.dc0cdc5.0191dfca28960a65c4efbd1d6c4f782a.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/static/favicon.7b22250.0191dfca28960a65c4efbd1d6c4f782a.png"><link data-vue-tag="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700"><link rel="preload" href="/assets/css/0.styles.fab56511.css" as="style"><link rel="preload" href="/assets/js/app.06a24c84.js" as="script"><link rel="preload" href="/assets/js/page--src--templates--post-vue.2807f3b2.js" as="script"><link rel="prefetch" href="/assets/js/page--src--pages--404-vue.76f0278c.js"><link rel="prefetch" href="/assets/js/page--src--pages--blog-vue.8697881c.js"><link rel="prefetch" href="/assets/js/page--src--pages--index-vue.a7e04183.js"><link rel="prefetch" href="/assets/js/page--src--templates--tag-vue.450e4d60.js"><link rel="stylesheet" href="/assets/css/0.styles.fab56511.css"><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <div data-server-rendered="true" id="app" class="content-wrapper bg-background-primary font-sans text-copy-primary leading-normal flex flex-col min-h-screen"><header class="top-0 left-0 z-40 fixed w-full border-t-14"><nav class="container mx-auto flex flex-col sm:flex-row py-8 justify-end"><div class="block lg:hidden self-end sm:self-auto"><button data-cypress="hamburger" title="menu" class="flex items-center px-3 py-2 border rounded border-gray-500 hover:text-gray-600 hover:border-gray-600"><svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="current-color h-3 w-3"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" fill="gray"></path></svg></button></div><ul data-cypress="menu" class="uppercase tracking-wide font-bold w-full block flex-grow lg:space-x-8 space-y-6 lg:space-y-0 lg:flex lg:flex-initial lg:w-auto items-center mt-8 lg:mt-0 hidden"><li class="mb-6 lg:mb-0 sm:w-64"><div class="relative" data-v-4e1ed704><div data-v-3ae9f24e data-v-4e1ed704></div><div class="relative w-full" data-v-4e1ed704><input type="text" placeholder="Search (Press  "/" to focus)" data-cypress="search" value="" class="bg-background-form border border-gray-500 rounded-full px-4 pl-10 py-2 outline-none focus:border-blue-500 w-full" data-v-4e1ed704><div class="absolute top-0 ml-3" style="top:10px" data-v-4e1ed704><svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24" class="text-gray-500 h-5 w-5" data-v-4e1ed704><path d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" class="heroicon-ui" data-v-4e1ed704></path></svg></div><!----></div><!----></div></li><li><a href="#" data-cypress="switchTheme" class="text-copy-primary hover:text-gray-600"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg></a></li><li><a href="/" class="text-copy-primary hover:text-gray-600 active">Home</a></li><li><a href="/blog" data-cypress="blog" class="text-copy-primary hover:text-gray-600">Blog</a></li></ul></nav></header><main class="flex flex-col flex-grow overflow-hidden pt-24"><div class="container-inner mx-auto my-16"><h1 class="text-4xl font-bold leading-tight">Summary of &quot;A Philosophy of Software Design&quot; by John Ousterhout</h1><div class="text-xl text-gray-600 mb-4">December 29, 2023</div><div class="flex mb-8 text-sm"><a href="/tag/Software%20Design/" class="tag rounded-full px-4 py-2 mr-4 hover:bg-blue-300">
+        Software Design
+      </a><a href="/tag/Frontend/" class="tag rounded-full px-4 py-2 mr-4 hover:bg-blue-300">
+        Frontend
+      </a><a href="/tag/Backend/" class="tag rounded-full px-4 py-2 mr-4 hover:bg-blue-300">
+        Backend
+      </a></div><div class="markdown-body mb-8"><p>
+"A Philosophy of Software Design" is a book written by John Ousterhout.
+It summarizes the author's extensive experience in computer science and
+his experience of teaching software design at Standford University. The main focus of this book is problem decomposition: "how to take a complex problem and device it up into pieces that can be solved independently." The book provides techniques on how to deal with the complexity of software.</p>
+<h2 id="chapter-1-introduction-its-all-about-complexity"><a href="#chapter-1-introduction-its-all-about-complexity" aria-hidden="true"><span class="icon icon-link"></span></a>Chapter 1 Introduction (It's all about complexity)</h2>
+<p>In the first chapter, Ousterhout lays out what the book is about. As software systems are not
+limited by practical limitations such as physics, the only limit to what we can create is our ability
+to read and understand the code we are writing.</p>
+<p>Any program generally gets more complex with time, as new features are always added.
+He states that there are two general approaches when fighting complexity:</p>
+<ul>
+<li>"Making code simpler and more obvious"</li>
+<li>"Encapsulate complexity (also called modular design)"</li>
+</ul>
+<p>Next, he explains that, in contrast with physical systems (like bridges and buildings), software systems tend to be more complex, and it isn't possible to fully visualize the design before writing the code.</p>
+<p>Therefore, a waterfall model doesn't work for software, and this is also why an incremental approach like agile
+development makes more sense when writing software.</p>
+<p>The developers should constantly consider design issues since incremental development also means incremental software design. The author finds that reducing complexity is the most important element of software design, so the developers should be focusing on that.</p>
+<p>Then, he lays out the two overall goals of the book:</p>
+<ul>
+<li>"Describing the nature of complexity"</li>
+<li>"Present techniques for minimizing complexity"</li>
+</ul>
+<p>He also emphasizes that since the concepts in the book can be abstract, the book should be used during code reviews. A list of red flags at the end of the book can provide some guidance
+during these reviews.</p>
+<h2 id="chapter-2-the-nature-of-complexity"><a href="#chapter-2-the-nature-of-complexity" aria-hidden="true"><span class="icon icon-link"></span></a>Chapter 2 The Nature of Complexity</h2>
+<p>In this chapter, the author provides us with his definition of complexity.</p>
+<p>He defines complexity as follows: "Complexity is anything related
+to the structure of a software system that makes it hard to understand and modify the system."</p>
+<p>The author notes that complexity is experienced more often when reading code than writing code.
+Hence, it is crucial to focus on creating code that others can easily understand.</p>
+<p>According to Ousterhout, complexity shows itself in three different ways:</p>
+<ul>
+<li>"Change Amplification" which means that a simple change requires changes in many different places</li>
+<li>"Cognitive Load" which refers to how much a developer has to know (or keep in mind)</li>
+<li>"Unknown unknowns" refers to a situation where it is not obvious what files must be modified</li>
+</ul>
+<p>Ousterhout states that two things cause complexity:</p>
+<ul>
+<li>"dependencies"</li>
+<li>"obscurity"</li>
+</ul>
+<p>A dependency exists when "a given piece of code can not be understood or modified in isolation."
+However, he acknowledges that dependencies are an essential part of software and that they can never be
+fully eliminated.</p>
+<p>Nevertheless, one of the goals of software design should be to reduce the amount of dependencies as
+much as possible, or at least make the remaining dependencies as obvious and straightforward as possible.</p>
+<p>An Obscurity exists when "important information is not obvious."</p>
+<p>This can happen due to various reasons:</p>
+<ul>
+<li>A non-obvious dependency between two parts of the code base</li>
+<li>Inconsistency</li>
+<li>Missing documentation (while keeping in mind that a need for extensive documentation could be a red flag in itself)</li>
+</ul>
+<p>Ousterhout notes that complexity builds up slowly over time and is hard to eliminate once it has
+accumulated. Therefore, he suggests "zero tolerance" towards complexity.</p>
+<h2 id="chapter-3-working-code-isnt-enough-strategic-vs-tactical-programming"><a href="#chapter-3-working-code-isnt-enough-strategic-vs-tactical-programming" aria-hidden="true"><span class="icon icon-link"></span></a>Chapter 3: Working Code Isn't Enough (Strategic vs. Tactical Programming)</h2>
+<p>In this chapter, Ousterhout identifies the difference between "Tactical Programming" and "Strategic Programming".</p>
+<p>Tactical Programmer:</p>
+<ul>
+<li>Gets stuff done fast</li>
+<li>Doesn't care about complexity building up</li>
+<li>Introduces complexity to the system over time</li>
+</ul>
+<p>Strategic Programmer:</p>
+<ul>
+<li>Focuses on good design while also having working code</li>
+<li>Has an investment mindset</li>
+<li>Doesn't increase complexity and tries to reduce it constantly</li>
+</ul>
+<p>He suggests spending 10 to 20% of development time on "investments." He argues that this investment will start to pay off within a few months, after which the velocity will increase by 10-20%, meaning that
+the investment will pay off quickly.</p>
+<p>Ousterhout also acknowledges that this "investment" approach is not suited well for early start-ups but that the "tactical" approach hurts a company in the medium to long run.
+Finally, he concludes that a tactical approach will speed up the first product launch since the payoff from good design comes so quickly.</p>
+<h2 id="chapter-4-modules-should-be-deep"><a href="#chapter-4-modules-should-be-deep" aria-hidden="true"><span class="icon icon-link"></span></a>Chapter 4: Modules Should Be Deep</h2>
+<p>In this chapter, the author presents the basic principles of "modular design" while introducing the concept of "deep modules."</p>
+<p>Ousterhout notes that one of the most important techniques for managing complexity is to ensure that developers only focus on a small amount of complexity at a time.</p>
+<p>In modular design, a system is decomposed into smaller - relatively independent - modules.
+A module can be anything, for example, a class, a sub-system, or a service. Ideally, all of our modules would be completely
+independent of each other. Ousterhout acknowledges, however, that there will always be dependencies between modules in the real world.
+Still, the goal of modular design should be to minimize dependencies between modules.</p>
+<p>He states that each module has two parts:</p>
+<ul>
+<li>An interface, which refers to the knowledge that a developer needs to work with the module</li>
+<li>an implementation, which refers to the actual implementation of the module</li>
+</ul>
+<p>He also defines that anything with an interface and an implementation is a module for this book's purpose.
+This would include classes but also methods and functions (and also other services or sub-systems).</p>
+<p><strong>What's in an interface?</strong></p>
+<p>He explains that an interface has two kinds of information: formal and informal.</p>
+<p>The formal parts of an interface (such as method parameters) can be checked for correctness by the programming language.
+The informal parts cannot be understood or enforced by the programming language. An example of this could be a function that
+deletes a file named in one of its arguments. If a developer needs to know any information besides the formal parts, this information is part of the module's interface.</p>
+<p><strong>Deep Modules</strong></p>
+<p>Ousterhout argues that the best modules "provide powerful functionality yet have simple interfaces."
+These modules are "deep," meaning they hide much of their complexity from other modules through simple interfaces.</p>
+<p>Deep modules are a good abstraction because only a small amount of the module's complexity is exposed to other modules.
+The depth of a module also describes its usefulness. The module's functionality should be weighed against the complexity
+of its interface.</p>
+<p><strong>Shallow Modules</strong></p>
+<p>The opposite of a deep module is a shallow module. Its interface is relatively complex when compared to the functionality
+the module provides.</p>
+<p><strong>Classitis</strong></p>
+<p>Ousterhout notes that his view of deep modules vs. shallow modules differs from that of many developers today.
+Many developers have the view that classes should be small, not deep. Ousterhout claims that this approach often leads to a lot of shallow classes, which increases the overall complexity of the system. Ousterhout invented a new syndrome called "classitis" for extreme forms of this programming style.</p>
+<p>"Classitis" helps to create simple classes, but the overall system complexity increases when using this coding style:</p>
+<ul>
+<li>Since small classes only provide a little functionality, you'll need a lot of them - each with its own interface.</li>
+<li>All these small classes accumulate to create a lot of overall complexity</li>
+<li>Having a lot of small classes is more verbose than having fewer larger classes due to the boilerplate required for each class</li>
+</ul>
+<p><strong>Example: Java and Unix I/O</strong></p>
+<p>He believes that an example of this "classitis" is the Java class library. Java in itself doesn't require lots of small classes, but Ousterhout believes that a culture of "classitis" has affected the Java programming community.</p>
+<p>To illustrate this, he shows us an example of how to open a file in order to create a serialized object from it.</p>
+<pre class="shiki" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #8FBCBB">FileInputStream</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">fileStream</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">new</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">FileInputStream</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">fileName</span><span style="color: #ECEFF4">)</span><span style="color: #81A1C1">;</span></span>
+<span class="line"><span style="color: #8FBCBB">BufferedInputStream</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">bufferedStream</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">new</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">BufferedInputStream</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">fileStream</span><span style="color: #ECEFF4">)</span><span style="color: #81A1C1">;</span></span>
+<span class="line"><span style="color: #8FBCBB">ObjectInputStream</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">objectStream</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">new</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">ObjectInputStream</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">bufferedStream</span><span style="color: #ECEFF4">)</span><span style="color: #81A1C1">;</span></span></code></pre>
+<p>He explains that the FileInputStream object only provides I/O but is incapable of performing buffered I/O, nor can it read or write a serialized object. To enable buffered I/O, it is required to add buffering by creating a BufferedInputStream object. Finally, the ObjectInputStream adds the ability to read and write serialized objects.
+Ousterhout notes that the FileInputStream and the BufferedInputStream objects are never used once the file has been opened.
+He finds it annoying (and error-prone) that the developer must always remember to create a BufferedInputStream because otherwise, there will be no buffering, and I/O will be slow.
+Ousterhout acknowledges that some users might not need or want buffering, but in his opinion, "interfaces should be designed to make the most common case as simple as possible." Buffering should be the default since most users require it.</p>
+<h2 id="chapter-5-information-hiding-and-leakage"><a href="#chapter-5-information-hiding-and-leakage" aria-hidden="true"><span class="icon icon-link"></span></a>Chapter 5: Information Hiding (and Leakage)</h2>
+<p>In this chapter, the author shares one of the techniques for creating deep modules.</p>
+<p>According to Ousterhout, information hiding is the most crucial idea to remember while creating deep modules. Information hiding means that each module should encapsulate some functionality.
+The only thing visible from the outside of the module is its interface. This means that the implementation of the functionality is hidden.</p>
+<p><strong>Information Hiding</strong></p>
+<p>Information hiding is so essential because it reduces complexity in two significant ways. First, it simplifies the interface of a module since the module provides its users with a simpler and more abstract view of the module's functionalities.
+Second, it reduces dependencies between the modules. For example, if a change is required, but it only affects the parts of the module that are hidden, then that change only affects this module and no other modules that may depend on it.</p>
+<p>Ousterhout suggests carefully considering what information can be hidden when creating a module.
+If it is possible to hide a piece of information, then it should also be possible to simplify the module's interface, thus
+making it deeper.</p>
+<p><strong>Information Leakage</strong></p>
+<p>The opposite of information hiding is information leakage. "Information Leakage occurs when a design decision is reflected in multiple modules." When information is leaked, other modules that use the affected module will start to depend on this information, thus creating a dependency between modules.</p>
+<p>Ousterhout notes that if a piece of information is part of the interface of a module, then it is leaked. However, there are other ways information can be leaked. As an example, Ousterhout describes a situation where two classes have knowledge of a file format (one class could be reading the file in that format while the other writes to the file)
+then this information - the file format - is leaked between the two classes. This type of information leakage is called
+Back-door leakage is the worst type of information leakage since it is not obvious.</p>
+<p>He argues that information leakage is one of software design's most important red flags. He suggests that one should ask oneself, "How can I reorganize these classes so that this particular piece of knowledge only affects
+a single class?"</p>
+<p>To do this, it can make sense to combine smaller classes into a bigger one or to pull out all the information and
+create a new class that encapsulates just that information.</p>
+<p><strong>Information hiding within a class</strong></p>
+<p>Information hiding can also be applied to methods in a class, which means that a private method within a class should encapsulate some information and hide it from the rest of the class.</p>
+<h2 id="chapter-6-general-purpose-modules-are-deeper"><a href="#chapter-6-general-purpose-modules-are-deeper" aria-hidden="true"><span class="icon icon-link"></span></a>Chapter 6 General-Purpose Modules are Deeper</h2>
+<p>In this chapter, Ousterhout tackles the question of how generic or specific modules should be.
+According to Ousterhout, the general-purpose approach is more consistent with the investment mindset mentioned in Chapter 3. Still, he acknowledges that the special-purpose approach aligns more with the agile way of developing software today.</p>
+<p>He thinks that the best solution is the sweet spot between general-purpose and special-purpose. This means that a module should provide the features that are needed today while also offering an interface that is general enough to support
+multiple use cases.</p>
+<p>To illustrate this, Ousterhout provides an example from his software design class where students were asked to build a simple text editor. Many student projects had a <code>Text</code> class that provided methods for - among other things - modifying the text file.</p>
+<p>Some projects created a special-purpose method for each text editing feature:</p>
+<pre class="shiki" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #81A1C1">void</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">backspace</span><span style="color: #ECEFF4">(</span><span style="color: #8FBCBB">Cursor</span><span style="color: #D8DEE9FF"> cursor</span><span style="color: #ECEFF4">)</span></span>
+<span class="line"><span style="color: #81A1C1">void</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">delete</span><span style="color: #ECEFF4">(</span><span style="color: #8FBCBB">Cursor</span><span style="color: #D8DEE9FF"> cursor</span><span style="color: #ECEFF4">)</span></span>
+<span class="line"><span style="color: #81A1C1">void</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">deleteSelection</span><span style="color: #ECEFF4">(</span><span style="color: #8FBCBB">Selection</span><span style="color: #D8DEE9FF"> selection</span><span style="color: #ECEFF4">)</span></span>
+<span class="line"><span style="color: #ECEFF4">...</span></span></code></pre>
+<p>Due to this approach, the class had a large amount of shallow methods, each of which was only usable for one of the required features. This also leaked information between the user interface and the <code>Text</code> class
+since the <code>Text</code> class had knowledge of the user interface. This is not good because it creates a dependency between the two modules.</p>
+<p>A better solution for this would be to make the <code>Text</code> class more generic:</p>
+<pre class="shiki" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #81A1C1">void</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">insert</span><span style="color: #ECEFF4">(</span><span style="color: #8FBCBB">Cursor</span><span style="color: #D8DEE9FF"> cursor</span><span style="color: #ECEFF4">)</span></span>
+<span class="line"><span style="color: #81A1C1">void</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">delete</span><span style="color: #ECEFF4">(</span><span style="color: #8FBCBB">Cursor</span><span style="color: #D8DEE9FF"> cursor</span><span style="color: #ECEFF4">)</span></span></code></pre>
+<p>With this interface, the <code>Text</code> class could be reused for other purposes than an editor. This solution is also better because it provides better information hiding. There is no need for the <code>Text</code> class to
+be aware of the UI-specific features such as backspace or delete.</p>
+<p>Ousterhout finds that general-purpose interfaces tend to have simpler interfaces than special-purpose ones.
+They also provide better separation between the classes than special-purpose interfaces that tend to leak information between classes.</p>
+<h2 id="chapter-7-different-layer-different-abstraction"><a href="#chapter-7-different-layer-different-abstraction" aria-hidden="true"><span class="icon icon-link"></span></a>Chapter 7 Different Layer, Different Abstraction</h2>
+<p>In this chapter, Ousterhout describes how abstractions should change on each system layer and how to refactor your code base if this is not the case. Software systems are composed of layers, where higher
+layers use the functionality provided by lower layers. Ousterhout argues that in a well-designed system, each layer should provide a different abstraction than the layer above or below it. This means that if you follow a single operation through the layers, the abstraction should change with each method call.</p>
+<p>The opposite would be the case when the abstractions are not changing or are very similar. According to Ousterhout, this red flag indicates a problem with the separation of classes.</p>
+<p><strong>Pass-through methods</strong></p>
+<p>One way this problem manifests itself is in the form of pass-through methods. A pass-through method is a method that does very little besides passing the arguments on to the next method, whose signature is similar to that of the calling method.</p>
+<p>Ousterhout notes that a method with the same interface is not always bad, but each method should add some
+functionality. Pass-through methods do not provide additional functionality; thus, they are bad.</p>
+<p><strong>Decorators</strong></p>
+<p>Next, Ousterhout describes the decorator design pattern. According to Ousterhout, a decorator object is an object that extends an existing object while providing a similar interface. An example is the <code>BufferedInputStream</code> class shown in Chapter 4.</p>
+<p>The purpose of decorator classes is to extend core classes to fit a more specific use case.
+However, according to Ousterhout, they tend to be shallow because they add a large amount of boilerplate code (many pass-through methods) for a relatively small amount of new functionality.</p>
+<p>Therefore, decorator classes should be kept to a minimum. Ousterhout suggests to <strong>consider</strong> alternatives such as:</p>
+<ul>
+<li>Adding the new functionality directly to the underlying class</li>
+<li>Add the new functionality to an already existing decorator class</li>
+<li>Create a whole new class</li>
+</ul>
+<p><strong>Interface versus Implementation</strong></p>
+<p>Ousterhout argues that the interface of a class should be different from its implementation. This means that the representation used internally should differ from the abstractions in the interface.</p>
+<p>To illustrate this, Ousterhout presents another example from his software design class text editor project. The <code>Text</code> class usually <strong>stored</strong> the text in lines within the file. Some of the teams also designed
+the <strong>interface</strong> of the <code>Text</code> class around lines, with methods like <code>getLine</code> and <code>putLine.</code></p>
+<p>However, this interface leads to problems because sometimes text gets inserted in the middle of a line, which means that the callers of this class have to split and join texts. The <code>Text</code> class was much easier to use when
+it provided a character-oriented interface.</p>
+<p><strong>Pass-through</strong> variables</p>
+<p>According to Ousterhout, a Pass-through variable is "a variable which is passed down a long chain of methods."
+They add complexity because all intermediate methods must be aware of them even though they might not use the variable themselves. This also means that if you need to change this variable or add a new one, you must modify many methods.</p>
+<p>He notes that it can be challenging to remove pass-through variables. One approach to do this is to see if an object is already shared by the topmost and bottommost methods. If this is the case, one can
+store the needed information in that object. Another option is storing the information in a global variable, although this typically creates other problems.</p>
+<p>Ousterhout finds the most fitting solution in most situations is using a context object, one per instance of the system. The context object will allow multiple system instances to coexist in a single process. Still
+Ousterhout warns that contexts are far from an ideal solution and that without discipline, a "context can turn into a huge grab-bag of data that creates nonobvious dependencies throughout the system."</p>
+<h2 id="chapter-8-pull-complexity-downwards"><a href="#chapter-8-pull-complexity-downwards" aria-hidden="true"><span class="icon icon-link"></span></a>Chapter 8 Pull Complexity Downwards</h2>
+<p>In this chapter, Ousterhout introduces another way of thinking about deeper classes. He argues that a module developer should always strive to make using the module as easy as possible. This also means that one should handle complexity internally within the module when possible, which means that we are pulling complexity downwards.</p>
+<p><strong>Configuration parameters</strong></p>
+<p>According to Ousterhout, configuration parameters are an example of moving complexity upwards. Instead of defining the behavior internally, a module can export a few parameters that control its behavior. Users of that module now have to configure these parameters and deal with the complexity that comes with that.</p>
+<p>Ousterhout recognizes that these parameters can be useful because they allow the user of a module to configure the module to their particular requirements. However, they can also easily be used as an excuse not to deal with complexity internally and pass it to the user of the module instead.</p>
+<p><strong>Taking it too far</strong></p>
+<p>Ousterhout warns that pulling complexity upwards should be done with discretion and that it can easily be overdone.
+Pulling complexity downwards makes sense if it results in the overall reduction of complexity. For example, if the complexity being pulled down simplifies the class's interface,</p>
+<h2 id="chapter-9-better-together-or-better-apart"><a href="#chapter-9-better-together-or-better-apart" aria-hidden="true"><span class="icon icon-link"></span></a>Chapter 9 Better Together Or Better Apart</h2>
+<p>In this chapter, Ousterhout discusses the fundamental question of whether two pieces of functionality should be implemented
+together or apart. According to Ousterhout, this question applies to all levels of the system, such as functions, methods, classes, and services.</p>
+<p>The goal, as always, is to reduce the overall complexity of the system as a whole. To do this, it is tempting to divide the system into many small components since the smaller the component, the simpler it will likely be.</p>
+<p>The problem with this approach is that it leads to a high number of components. The more components, the harder it will be to manage them all. This also means the system will need additional code just to manage the components.
+Another disadvantage of this approach is that we now have multiple components instead of having one component.
+This can make it harder for developers to change the system because they have to modify and be aware of various components instead of one.</p>
+<p>If the components are truly independent and don't have many dependencies between them, then this subdivision is good.
+Otherwise, it is bad. According to Ousterhout, this will cause developers to need to know a lot of components, which causes a higher cognitive load. It can also lead to bugs if developers are unaware of these dependencies.</p>
+<p>Ousterhout notes that bringing together pieces of code is most beneficial if they are closely related.</p>
+<p>He also lists a few tips on how to notice that this is the case:</p>
+<ul>
+<li>They share the same information. For example, if both share some knowledge about a file format</li>
+<li>They are used together, meaning that users of this piece of code also often use the other</li>
+<li>They overlap conceptually, meaning that both of the pieces of code are part of a higher-level category</li>
+<li>It is hard to understand one of the pieces of code without looking at the other</li>
+</ul>
+<p><strong>Separate general-purpose and special-purpose</strong></p>
+<p>Next, Ousterhout explains that when a module contains a functionality that can be used for several other purposes, it should only provide this functionality and no other special-purpose code. This allows the module to be independent and reusable in other modules.</p>
+<p><strong>Splitting and joining methods</strong></p>
+<p>According to Ousterhout, the same questions also apply to methods. Ousterhout finds that - contrary to popular belief - long methods are not always bad. He believes a method containing five 20-line blocks of code is acceptable as long as the blocks are relatively independent and executed in order. This would mean that the method can be read one block at a time; thus, there would not be a benefit in moving the blocks into separate methods.
+He explains that this is especially true when the blocks have complex interactions. Because the developer needs to see all the code at once. If they would be in different methods, the developer that works on the
+code would be forced to switch back and forth to understand how they work together.</p>
+<p>Next, he applies the idea of deep modules to methods. He finds that a method containing hundreds of lines of code is fine if it has a simple interface because this would mean that the method is 'deep.'</p>
+<h2 id="chapter-10-define-errors-out-of-existence"><a href="#chapter-10-define-errors-out-of-existence" aria-hidden="true"><span class="icon icon-link"></span></a>Chapter 10 Define Errors Out Of Existence</h2>
+<p>In this chapter, Ousterhout discusses exception handling and why exceptions contribute disproportionately to complexity and
+how to simplify exception handling.</p>
+<p><strong>Why exceptions add complexity</strong></p>
+<p>Ousterhout notes that, exception-handling code is more complex to write than regular code because exceptions tend to disrupt the normal flow of the code. When an exception occurs, a developer can either move forward to the next step regardless of the exception or abort the operation and throw an error. As the error gets reported 'upwards,' the developer must eventually find a way to handle the exception. Ousterhout states that exceptions usually don't occur often in running systems, so the error handling code is not executed often. Thus, bugs can sometimes go undetected for a long time.</p>
+<p>To prove his point, Ousterhout cites a study that found that more than 90% of catastrophic failures in distributed data-intensive systems were caused by incorrect error handling.</p>
+<p><strong>Too many exceptions</strong></p>
+<p>Ousterhout states that one of the reasons that problems related to exception handling increase is that developers
+define too many unnecessary exceptions. According to Ousterhout, most developers are taught that detecting and reporting errors is essential, but some take this to the extreme.</p>
+<p>As an example, Ousterhout describes an error he himself made while designing the Tcl scripting language.
+The Tcl scripting language had a command called <code>unset,</code> which is used to remove a variable. The command throws an error if the variable that should be deleted doesn't exist. Ousterhout explains that he thought that when someone tries to remove a variable that doesn't exist, it must be a bug, and therefore it should be reported. However, he did not
+foresee that the most common use case of <code>unset</code> would be the clean-up of temporary state after a previous operation. Unfortunately, it is often hard to predict the state of a variable at the time of clean-up, especially
+after an operation was aborted. Thus, most developers will try to reset all variables regardless of their current state.</p>
+<p>Since <code>unset</code> throws an error when the variable doesn't exist, developers end up enclosing every unset call with a
+catch statement to ignore all errors thrown by it.</p>
+<p>Ousterhout views this design decision as one of his biggest mistakes when designing Tcl.</p>
+<p><strong>Define errors out of existence</strong></p>
+<p>Ousterhout suggests that the best way to deal with exception-handling complexity is to define your interfaces so that no exceptions need to be thrown. He calls this "define errors out of existence."</p>
+<p>As an example, he circles back to the <code>unset</code> command discussed above. Ousterhout states that he should have used a better definition for the <code>unset</code> command. Instead of deleting the variable, the <code>unset</code> command should be defined as ensuring that the variable no longer exists. With the first definition (deleting), the <code>unset</code> command can't do its job
+if the variable doesn't exist. With the second definition (ensuring that the variable doesn't exist), the unset command could just do nothing if it doesn't exist. Meaning that it would not have to throw an error.</p>
+<p><strong>Mask exceptions</strong></p>
+<p>Next, Ousterhout describes the second technique for reducing the number of places exceptions must be handled: Exception masking. The basic idea of this technique is that the lower module handles the error so that the higher-level modules don't need to do it.</p>
+<p>He provides TCP as an example since TCP masks packet loss by simply resending lost packets. So that clients are unaware that a problem has occurred.</p>
+<p><strong>Exception aggregation</strong></p>
+<p>Next, Ousterhout describes the third technique, "exception aggregation." The idea behind exception aggregation is to handle many exceptions with a single piece of code. Instead of having to write exception handlers for each exception, handle them all with a single handler.</p>
+<p>As an example, Ousterhout describes the error handling for a missing parameter in a web server. Typically, a service
+method will call a low-level method (e.g., <code>getParameter</code>) to get the needed parameters. This method will throw an error if the requested parameter does not exist.</p>
+<p>When the students of his software design class implement this, many of them wrap the <code>getParameter</code> call in an exception handler. This approach resulted in a large number of methods that essentially did the same thing - generating an error response.</p>
+<p>Ousterhout suggests a better approach would be to let the errors propagate up to the top-level dispatch method and handle them there. Thus, a single handler could catch all of the <code>ParameterNotFound</code> exceptions and generate the error response.</p>
+<p>He highlights that this and the <strong>Mask exceptions</strong> approach - even though they are both the opposite - both aim to reduce places where exception handlers would be otherwise created.</p>
+<p><strong>Just crash?</strong></p>
+<p>The final technique that Ousterhout describes is just to let the application crash. These errors are either impossible to handle or not worth trying to handle.</p>
+<p><strong>Taking it too far</strong></p>
+<p>Ousterhout warns that the "masking" and the "defining out of existence" techniques only make sense if the exception information
+is not needed outside the module. He stresses that when something is important, it should be exposed.</p>
+<h2 id="chapter-11-design-it-twice"><a href="#chapter-11-design-it-twice" aria-hidden="true"><span class="icon icon-link"></span></a>Chapter 11 Design it twice</h2>
+<p>In this chapter, Ousterhout argues that one should consider multiple options before deciding on a major design.
+To help find the best design, he suggests that one approach the problem from different angles. Then, after one has
+designed the alternatives, one should make a list of pros and cons to find the best one. He also provides a few questions
+that one should ask oneself:</p>
+<ul>
+<li>"Does one alternative have a simpler interface than another?"</li>
+<li>"Is one interface more general-purpose than another?"</li>
+<li>"Does one interface enable more efficient implementation than another?"</li>
+</ul>
+<h2 id="chapter-12-why-write-comments-the-four-excuses"><a href="#chapter-12-why-write-comments-the-four-excuses" aria-hidden="true"><span class="icon icon-link"></span></a>Chapter 12 Why Write Comments? The Four Excuses</h2>
+<p>In this chapter, Ousterhout points out the excuses developers use to avoid writing comments and why comments play a crucial
+role in software design.</p>
+<p><strong>1. Good code is self-documenting</strong></p>
+<p>Ousterhout states that some people believe a code does not need comments if it is well-written.
+He calls this a "delicious myth". He believes that the informal aspects of an interface can only be described in comments.
+According to Ousterhout, there are many other reasons as to why comments make sense. For example, one could explain the rationale behind the code or give a high-level explanation of a method.</p>
+<p>Comments also save time. For example, it's faster to understand what a method does by reading its description than
+by reading the methods code. Another reason for comments is that they allow us to provide additional information to the
+user of a module.</p>
+<p><strong>2. I don't have time to write comments</strong></p>
+<p>Ousterhout observes that although it is tempting to de-prioritize writing comments, they provide a massive difference in maintainability and that the effort spent on them pays off quickly. It is the same investment mindset that is discussed in previous chapters that also applies here.</p>
+<p><strong>3. Comments get out of date and become misleading</strong></p>
+<p>Ousterhout suggests that code reviews should fix this issue.</p>
+<p><strong>4. All the comments I have seen are worthless</strong></p>
+<p>Although Ousterhout agrees that some comments are worthless, he suggests that writing good comments is easy once one knows how to write them.</p>
+<p><strong>Benefits of well-written comments</strong></p>
+<p>In summary, Ousterhout concludes that the idea comments should "capture information that was in the mind of the designer but couldn't
+be represented in the code." He argues that good comments save future developers time because they will be able to understand
+the intent behind the code better. Therefore, good documentation reduces <strong>Cognitive load</strong> and helps to reduce <strong>Unknown unknowns</strong>.</p>
+<h2 id="chapter-13-comments-should-describe-things-that-arent-obvious-from-the-code"><a href="#chapter-13-comments-should-describe-things-that-arent-obvious-from-the-code" aria-hidden="true"><span class="icon icon-link"></span></a>Chapter 13 Comments Should Describe Things that Aren't Obvious from the Code</h2>
+<p>In this chapter, Ousterhout discusses what information needs to be described and how to write good comments.</p>
+<p><strong>Pick conventions</strong></p>
+<p>Ousterhout mentions that it is important to pick conventions that decide what and how you will comment.</p>
+<p>The most important comments are the interface and the data structure member (e.g., a class variable or a method)
+comments. According to Ousterhout, every class interface, variable, and method should have a comment.
+Although occasionally, the declaration of a variable is so obvious that a comment would be redundant, he finds it easier to comment it anyway instead of worrying whether a comment is really needed.</p>
+<p><strong>Don't repeat the code</strong></p>
+<p>Ousterhout states that many comments are not helpful because they repeat the code. It is not very useful if all the information can be easily deducted from the code <strong>next to</strong> the comment.</p>
+<p>Then, he provides a few examples of bad comments.</p>
+<pre class="shiki" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #616E88">// Add a horizontal scroll bar</span></span>
+<span class="line"><span style="color: #D8DEE9FF">hScrollBar </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">new</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">JScrollBar</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9">JScrollBar</span><span style="color: #ECEFF4">.</span><span style="color: #D8DEE9">Horizontal</span><span style="color: #ECEFF4">)</span><span style="color: #81A1C1">;</span></span>
+<span class="line"><span style="color: #88C0D0">add</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">hScrollBar</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">BorderLayout</span><span style="color: #ECEFF4">.</span><span style="color: #D8DEE9">SOUTH</span><span style="color: #ECEFF4">)</span></span>
+
+<span class="line"><span style="color: #616E88">// Add a vertical scroll bar</span></span>
+<span class="line"><span style="color: #D8DEE9FF">vScrollBar </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">new</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">JScrollBar</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9">JScrollBar</span><span style="color: #ECEFF4">.</span><span style="color: #D8DEE9">Vertical</span><span style="color: #ECEFF4">)</span><span style="color: #81A1C1">;</span></span>
+<span class="line"><span style="color: #88C0D0">add</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">vScrollBar</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">BorderLayout</span><span style="color: #ECEFF4">.</span><span style="color: #D8DEE9">EAST</span><span style="color: #ECEFF4">)</span><span style="color: #81A1C1">;</span></span>
+
+<span class="line"><span style="color: #616E88">// Initialize the caret-position values</span></span>
+<span class="line"><span style="color: #D8DEE9FF">caretX </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">0</span><span style="color: #81A1C1">;</span></span>
+<span class="line"><span style="color: #D8DEE9FF">caretY </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">0</span><span style="color: #81A1C1">;</span></span>
+<span class="line"><span style="color: #D8DEE9FF">caretMemX </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">null;</span></span></code></pre>
+<p>These comments don't add any information.</p>
+<pre class="shiki" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #616E88">/*</span></span>
+<span class="line"><span style="color: #616E88"> * obtain a normalized resource name from req.</span></span>
+<span class="line"><span style="color: #616E88"> */</span></span>
+<span class="line"><span style="color: #81A1C1">private</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">static</span><span style="color: #D8DEE9FF"> string</span><span style="color: #ECEFF4">[]</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">getnormalizedresourcenames</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">httprequest req</span><span style="color: #ECEFF4">)</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">...</span></span>
+
+<span class="line"><span style="color: #616E88">/*</span></span>
+<span class="line"><span style="color: #616E88"> * downcast parameter to type.</span></span>
+<span class="line"><span style="color: #616E88"> */</span></span>
+<span class="line"><span style="color: #81A1C1">private</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">static</span><span style="color: #D8DEE9FF"> object </span><span style="color: #88C0D0">downcastparameter</span><span style="color: #ECEFF4">(</span><span style="color: #D8DEE9FF">string parameter</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> string type</span><span style="color: #ECEFF4">)</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">...</span></span>
+
+<span class="line"><span style="color: #616E88">/*</span></span>
+<span class="line"><span style="color: #616E88"> * the horizontal padding of each line in the text.</span></span>
+<span class="line"><span style="color: #616E88"> */</span></span>
+<span class="line"><span style="color: #81A1C1">private</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">static</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">final</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">int</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">texthorizontalpadding</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">4</span><span style="color: #81A1C1">;</span></span></code></pre>
+<p>In this example, the sentences are just made up of the words and the variable names. This is a good indication that a comment isn't helpful.</p>
+<p>A first step to writing better comments is to use different words than the words that are already present in the code:</p>
+<pre class="shiki" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #616E88">/*</span></span>
+<span class="line"><span style="color: #616E88"> * The amount of blank space to leave on the left and right sides of each line</span></span>
+<span class="line"><span style="color: #616E88"> * of text, in pixels.</span></span>
+<span class="line"><span style="color: #616E88"> */</span></span>
+<span class="line"><span style="color: #81A1C1">private</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">static</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">final</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">int</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">textHorizontalPadding</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">4</span><span style="color: #81A1C1">;</span></span></code></pre>
+<p>In this case, we use a word different from "padding" because some people might not know what it means.</p>
+<p><strong>Lower-level comments add precision; higher-level comments enhance intuition</strong></p>
+<p>Next, Ousterhout explains that comments should be on a different level of detail than the code.
+A comment can either be on a higher-level, a lower-level, or the same level as the code.
+A lower-level comment is a comment that is more detailed than the code. A higher-level comment provides high-level
+information about the code, such as the rationale behind the code.</p>
+<p>Ousterhout notes that comments on the same level will likely repeat the code. Comments on a higher level provide intuition by helping us understand the code's overall intent and rationale.</p>
+<p><strong>Interface documentation</strong></p>
+<p>According to Ousterhout, the most important role of comments is to describe the abstraction an interface provides.
+He recalls his definition of abstraction as a "simplified view of an entity, which preserves essential information but omits details that can safely be ignored." He argues that since code isn't able to describe abstracts at a high level, one must provide comments to document the abstraction.</p>
+<p>He distinguishes between interface comments and implementation comments. An interface comment is a comment that provides
+information about a class or method for the user who wants to use it. The implementation comments, on the other hand, describe how a class or method works internally to implement the functionality. Ousterhout notes that it is crucial to separate these two comments so that the user of an interface is not confronted with the implementation details.</p>
+<p>He provides an example of an interface comment:</p>
+<pre class="shiki" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #616E88">/**</span></span>
+<span class="line"><span style="color: #616E88"> * This class implements a simple server-side interface to the HTTP protocol:</span></span>
+<span class="line"><span style="color: #616E88"> * by using this class, an application can receive HTTP requests, process them, and</span></span>
+<span class="line"><span style="color: #616E88"> * and return responses. Each interface of this class corresponds to a particular</span></span>
+<span class="line"><span style="color: #616E88"> * socket used to receive requests. The current implementation is single-threaded and</span></span>
+<span class="line"><span style="color: #616E88"> * processes one request at a time.</span></span>
+<span class="line"><span style="color: #616E88"> */</span></span>
+<span class="line"><span style="color: #81A1C1">public</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">class</span><span style="color: #D8DEE9FF"> </span><span style="color: #8FBCBB">Http</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">{...}</span></span></code></pre>
+<p><strong>Implementation comments: what and why, not how</strong></p>
+<p>Ousterhout explains that, implementation comments are the comments that appear within the methods of a class that help the readers understand how it works and what it is doing. Although the focus should not be on <strong>how</strong> something is done, the focus is <strong>what</strong> and <strong>why</strong>.</p>
+<p><strong>Cross-module design decisions</strong></p>
+<p>Ousterhout states that real systems often end up with design decisions that affect multiple classes. As an example of this
+he names the design decisions of a network protocol that affect both the sender and the receiver, which may be implemented in different places.</p>
+<p>This can make it hard to decide where the best place to document these design decisions is.
+In a case like this, Ousterhout suggests putting the documentation in a place that will naturally be discovered by
+a developer working on these classes. If there is no obvious place like that, he suggests having a file called <strong>designNotes</strong>
+that is divided up with labels for each major design decision.</p>
+<p>Then, in the code related to this design decision, he suggests putting a comment referring to the <strong>designNotes</strong> file.</p>
+<pre class="shiki" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #d8dee9ff">// See &#39;topic&#39; in designNotes.</span></span></code></pre>
+<p>Ousterhout notes that one disadvantage is that the documentation is not close enough to the code, so keeping it up to date with the code could be difficult.</p>
+<h2 id="chapter-14-choosing-names"><a href="#chapter-14-choosing-names" aria-hidden="true"><span class="icon icon-link"></span></a>Chapter 14 Choosing Names</h2>
+<p>In this chapter, Ousterhout discusses naming things, which, according to Ousterhout, is one of the most underrated aspects of software design. When variables - and classes, methods, and so on - have good names, it is easier to understand the code because they act like a form of documentation and thus make the code more obvious.</p>
+<p>The opposite is true about bad names since poor name choices increase the complexity of the code and can lead to misunderstandings, which can result in bugs.</p>
+<p><strong>Example: bad names cause bugs</strong></p>
+<p>As an example of a bug due to bad naming, Ousterhout recalls the most challenging bug he ever fixed.
+At the time, he was working on an operating system called Sprite. A bug occurred randomly where some files would lose data.
+The bug was quite simple but was very hard to find because the naming of the variable was ambiguous. The file system code used the variable name <code>block</code> for two different things. Sometimes, the name <code>block</code> would refer to a physical block on a disk, and sometimes it would refer to a logical block within a file. At one point in the code, there was a mix-up due to this naming, which caused an unrelated block on the disk
+to be overwritten with zeros.</p>
+<p>Ousterhout notes that a more precise naming, such as <code>fileBlock</code> and <code>diskBlock</code> could have prevented this bug. Hence, he suggests that one should take extra time to choose great names which are precise, unambiguous, and intuitive.</p>
+<p><strong>Names should be precise</strong></p>
+<p>Ousterhout finds that a name must be precise and consistent for it to be good. The most common problem with variable names is that most of them are too generic and not precise enough. If a name is too broad, it may be confused with other things, which it is not. Ousterhout notes that if one has trouble coming up with a good name for a variable,
+this could indicate that the variable may need a more straightforward definition or purpose. For example, a variable could be used to represent too many things; in that case, it would make sense to separate it into multiple variables.</p>
+<h2 id="chapter-15-write-the-comments-first-use-comments-as-part-of-the-design-process"><a href="#chapter-15-write-the-comments-first-use-comments-as-part-of-the-design-process" aria-hidden="true"><span class="icon icon-link"></span></a>Chapter 15 Write The Comments First (Use Comments as Part of The Design Process)</h2>
+<p>In this chapter, Ousterhout discusses how comments can help during the design process and why writing them as one writes the code is essential.</p>
+<p><strong>Delayed comments are bad comments</strong></p>
+<p>He states that almost every developer he has met puts off writing documentation. This is a problem because once this process is delayed, it often means that the documentation does not get written at all. Ousterhout argues that
+even if it does eventually get done, the quality of the documentation will not be the same because the developer will have
+forgotten some of the details of the design process.</p>
+<p><strong>Write the comments first</strong></p>
+<p>Instead, he suggests writing the comments before implementing the code. For a new class, he starts by writing the class interface comment. Next, he will write the interface comments and signatures for the most important public methods. Then, he will iterate a bit until the comments and the basic structure of the class feel right. At that point,
+he will write the declarations and comments for the most important instance variables. As the last step, he will implement the methods and add the implementation comments.</p>
+<p>With this approach, there will never be a backlog of unwritten comments. According to Ousterhout, this approach has three
+benefits:</p>
+<ul>
+<li>It produces better comments</li>
+<li>Design decisions are still fresh on one's mind, so there is no need to remember things</li>
+<li>It's easier to focus on the abstraction and the interface of a method when writing the comment first without having
+to worry about its implementation</li>
+</ul>
+<p><strong>Comments are a design tool</strong></p>
+<p>An important benefit of writing comments at the beginning, which Ousterhout mentions, is that it improves the system design.
+When writing a comment, one can think about the abstraction before actually implementing it.
+Also, comments are essential to good system design because they provide the only way to describe the abstraction fully. The very act of writing a good comment forces one to identify the essence of a variable or a piece of code, which also helps improve the overall system design.</p>
+<p><strong>Early comments are fun</strong></p>
+<p>Another benefit that Ousterhout mentions is that for him, one of the most enjoyable part of programming is the early design phase, where he can think about the abstraction and structure of the class. Ousterhout argues that writing comments during this phase is more fun.</p>
+<h2 id="chapter-16-modifying-existing-code"><a href="#chapter-16-modifying-existing-code" aria-hidden="true"><span class="icon icon-link"></span></a>Chapter 16 Modifying Existing Code</h2>
+<p>In this chapter, Ousterhout shares his views on modifying existing code. He argues that since software development is iterative and incremental, the final design of a system is more influenced by the design decisions that were made during the systems
+evolution than the initial design.</p>
+<p><strong>Stay strategic</strong></p>
+<p>He warns that one must resist the temptation to make quick fixes. Instead, one should consider if the system's current design is still the best for its job and change it if it's not.</p>
+<p><strong>Maintaining comments: keep the comments near the code</strong></p>
+<p>Ousterhout notes that it's easy to keep the comments up to date when they are near the code. For example, the methods interface comment should be above the method's body.</p>
+<p>He also argues that the farther away the comment is from the code, the more abstract it should be.</p>
+<p>A comment that gives a high-level overview should not go into implementation details. By doing this, we reduce the likelihood of the comment being invalidated by code changes.</p>
+<p><strong>Comments belong in the code, not the commit log</strong></p>
+<p>He argues that since the commit log is less likely to be seen than the source code itself, placing the documentation there does not make sense. Instead, it should be in the source code itself.</p>
+<p><strong>Maintaining comments: avoid duplication</strong></p>
+<p>Next, Ousterhout suggests avoiding duplicate comments since it is more difficult to update multiple places instead of one. He also mentions that if information is already documented outside the source code, one should reference that external documentation.</p>
+<h2 id="chapter-17-consistency"><a href="#chapter-17-consistency" aria-hidden="true"><span class="icon icon-link"></span></a>Chapter 17 Consistency</h2>
+<p>In this chapter, Ousterhout shares his thoughts on consistency and how consistency can help reduce a system's overall complexity by making things more obvious. Consistency allows a developer to learn how a thing
+is done in one place and apply that knowledge to other places. If a code base is inconsistent, developers must learn each situation separately.</p>
+<p><strong>Examples of consistency</strong></p>
+<p>Consistency can be applied at all levels of a system. To illustrate this, Ousterhout provides a few examples:</p>
+<ul>
+<li>Names</li>
+<li>Coding style</li>
+<li>Interfaces (meaning <code>interfaces</code> as a language feature)</li>
+<li>Design patterns</li>
+<li>Invariants</li>
+</ul>
+<p><strong>Ensuring consistency</strong></p>
+<p>Ousterhout states that consistency is hard to maintain since many people typically work on a project over time. Another reason is that some people (e.g., a new co-worker) might now know about already established conventions.</p>
+<p>He provides a few tips that help to maintain consistency:</p>
+<ul>
+<li>Document a list that describes the most important overall conventions, such as coding style guidelines.</li>
+<li>Enforce the conventions by having a tool that checks for violations and checks the code before it can be committed.</li>
+</ul>
+<p>As a final tip on conventions, Ousterhout shares the old saying: "When in Rome, do as the Romans do."</p>
+<p><strong>Taking it too far</strong></p>
+<p>Ousterhout argues that consistency is only beneficial if it applies to similar things. Meaning that it is fine to do things differently if it makes sense in that case. Ousterhout warns that one should not become overzealous
+and try to force things into being done the same way for consistency's sake, as this will only create complexity and confusion.</p>
+<h2 id="chapter-18-code-should-be-obvious"><a href="#chapter-18-code-should-be-obvious" aria-hidden="true"><span class="icon icon-link"></span></a>Chapter 18 Code Should be Obvious</h2>
+<p>In this chapter, Ousterhout tackles one of the two leading causes of complexity: Obscurity. He then shares some factors that make code more or less obvious.</p>
+<p><strong>Things that make code more obvious</strong></p>
+<p>First, Ousterhout recalls previously discussed techniques that help to reduce obscurity:
+<strong>Choosing good names</strong> and <strong>consistency</strong>.</p>
+<p>He then offers a few more general-purpose techniques for making code more obvious. The first is to use white space when formatting one's code, as it impacts how easy it is to read. An example of this he provides
+two code snippets.</p>
+<p>Without whitespace:</p>
+<pre class="shiki" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #616E88">/**</span></span>
+<span class="line"><span style="color: #616E88">  * ...</span></span>
+<span class="line"><span style="color: #616E88">  * </span><span style="color: #8FBCBB">@param</span><span style="color: #616E88"> </span><span style="color: #D8DEE9">numThreads</span><span style="color: #616E88"> The number of threads that this manager should </span></span>
+<span class="line"><span style="color: #616E88">  * spin up in order to manage ongoing connections. The MessageManager</span></span>
+<span class="line"><span style="color: #616E88">  * spins up at least one thread for every open connection, so this</span></span>
+<span class="line"><span style="color: #616E88">  * should be at least equal to the number of connections you expect</span></span>
+<span class="line"><span style="color: #616E88">  * to be open at once. This should be a multiple of that number if</span></span>
+<span class="line"><span style="color: #616E88">  * you expect to send a lot of messages in a short amount of time.</span></span>
+<span class="line"><span style="color: #616E88">  * </span><span style="color: #8FBCBB">@param</span><span style="color: #616E88"> </span><span style="color: #D8DEE9">handler</span><span style="color: #616E88"> Used as a callback in order to handle incoming</span></span>
+<span class="line"><span style="color: #616E88">  * messages on this MessageManagers&#39;s open connections. See</span></span>
+<span class="line"><span style="color: #616E88">  * {@code MessageHandler} and {@code handleMessage} for details.</span></span></code></pre>
+<p>With whitespace:</p>
+<pre class="shiki" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #616E88">/**</span></span>
+<span class="line"><span style="color: #616E88">  * ...</span></span>
+<span class="line"><span style="color: #616E88">  * </span><span style="color: #8FBCBB">@param</span><span style="color: #616E88"> </span><span style="color: #D8DEE9">numThreads</span></span>
+<span class="line"><span style="color: #616E88">  *   The number of threads that this manager should spin up in</span></span>
+<span class="line"><span style="color: #616E88">  *   order to manage ongoing connections. The MessageManager spins</span></span>
+<span class="line"><span style="color: #616E88">  *   up at least one thread for every open connection, so this</span></span>
+<span class="line"><span style="color: #616E88">  *   should be at least equal to the number of connections you </span></span>
+<span class="line"><span style="color: #616E88">  *   expect to be open at once. This should be a multiple of that </span></span>
+<span class="line"><span style="color: #616E88">  *   number if you expect to send a lot of messages in a short</span></span>
+<span class="line"><span style="color: #616E88">  *   amount of time.</span></span>
+<span class="line"><span style="color: #616E88">  * </span><span style="color: #8FBCBB">@param</span><span style="color: #616E88"> </span><span style="color: #D8DEE9">handler</span><span style="color: #616E88"> </span></span>
+<span class="line"><span style="color: #616E88">  *   Used as a callback in order to handle incoming</span></span>
+<span class="line"><span style="color: #616E88">  *   messages on this MessageManagers&#39;s open connections. See</span></span>
+<span class="line"><span style="color: #616E88">  *   {@code MessageHandler} and {@code handleMessage} for details.</span></span></code></pre>
+<p>He also suggests using whitespaces within methods to separate major blocks. He suggests adding a comment above each block to make the code even more obvious.</p>
+<p><strong>Things that make code less obvious</strong></p>
+<p>In this section, the author shares a few examples of things that can make the code nonobvious.</p>
+<p><strong>Event-driven programming</strong></p>
+<p>According to Ousterhout, Event-driven programming is a programming style where an application responds to
+external occurrences, such as the arrival of a network packet or the press of a mouse button.</p>
+<p>One module will be in charge of reporting incoming events (the event module), while other parts of the application register
+interest in an event and asking the event module to invoke a given function or method once the event occurs.
+Ousterhout finds this programming style hard to follow because the event handler functions are never invoked directly.
+Typically, they are invoked indirectly by the event module using a function pointer or interface.</p>
+<p><strong>Generic containers</strong></p>
+<p>Ousterhout states that many programming languages provide classes to group two or more items into a single object. For example, <code>Pair</code> in Java. He states that one of the most common use cases of these classes is to return multiple values from a method.</p>
+<pre class="shiki" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #81A1C1">return</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">new</span><span style="color: #D8DEE9FF"> </span><span style="color: #8FBCBB">Pair</span><span style="color: #ECEFF4">&lt;</span><span style="color: #8FBCBB">Integer</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> </span><span style="color: #8FBCBB">Boolean</span><span style="color: #ECEFF4">&gt;(</span><span style="color: #D8DEE9FF">currentTerm</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">false</span><span style="color: #ECEFF4">)</span><span style="color: #81A1C1">;</span></span></code></pre>
+<p>Ousterhout claims that, these generic containers result in nonobvious code because the elements have generic names
+that obscure their actual names.</p>
+<p>To solve the issue of returning multiple values from a method, Ousterhout suggests just creating a specialized class structure for this use case. That way, one can provide meaningful names for the elements, and it is also possible to add documentation to the declaration.</p>
+<p>He notes that, this example illustrates a general rule where "software should be designed for ease of reading, not ease of writing".</p>
+<p>Generic containers break this rule because they are easy to write but can be confusing for the reader.</p>
+<h2 id="chapter-19-software-trends"><a href="#chapter-19-software-trends" aria-hidden="true"><span class="icon icon-link"></span></a>Chapter 19 Software Trends</h2>
+<p>In this chapter, Ousterhout considers several trends in the software development world and evaluates if and how they might
+help to reduce complexity.</p>
+<p><strong>Object-oriented programming and inheritance</strong></p>
+<p>Ousterhout states that, one of the main elements of OOP is inheritance. He believes that inheritance comes in two forms, which both have a different impact on complexity:</p>
+<p>The first form of inheritance is interface inheritance, where a parent class defines the signatures of one or more methods but does not implement them. Ousterhout finds that interface inheritance reduces complexity because one will reuse the same interface for multiple purposes. This is especially true if an interface has many implementations,
+because then it is more likely that this interface captures essential features of all the implementations while not being concerned with the implementation details.</p>
+<p>The second form of inheritance is the implementation inheritance, where a parent class not only defines the signatures but also implements one or more methods. Subclasses inherit these methods, but they can also overwrite them.
+This allows for code sharing among classes because it is possible to provide an implementation of a method to all
+subclasses.</p>
+<p>A disadvantage to implementation inheritance, according to Ousterhout, is that the inheritance creates dependencies between the parent class and the subclasses. He finds this can lead to information leakage between
+the classes in the class tree. For example, he mentions the case where a developer needs to make changes to the parent class; in that case, he may have to check all of its subclasses to ensure they still work as expected.</p>
+<p>In an extreme case, the developer would have to check all classes in the tree to ensure nothing breaks.
+Therefore, Ousterhout suggests using implementation inheritance cautiously and that one should consider a composition-based approach first.</p>
+<p><strong>Agile development</strong></p>
+<p>Agile development is a practice that aims to make software development more lightweight, flexible, and incremental.</p>
+<p>Ousterhout finds this approach is similar to the one he advocates in this book. However, he also finds that one of the risks of this agile, incremental approach is that it can encourage tactical programming to get a feature done as fast as possible. Another problem, in his opinion, is that some practitioners argue that one shouldn't implement a general-purpose approach right away. They argue that one should first implement a special-purpose solution and then implement the general-purpose one once needed.</p>
+<p>Although Ousterhout agrees that this makes sense, he still finds that it encourages a tactical style of programming that can result in a rapid accumulation of complexity.</p>
+<p><strong>Unit tests</strong></p>
+<p>Unit tests are one of the tenets of agile development, and the practice of writing unit tests has become widely accepted today. Since unit tests help verify that the code works as expected, they also help facilitate refactoring. Hence, he finds that unit tests are crucial in software design as they encourage developers to refactor and improve the code.</p>
+<p><strong>Test-driven development</strong></p>
+<p>Test-driven development is an approach to software development where developers write the tests before implementing the code. Since the developer's goal is to make the test pass, Ousterhout finds that this approach focuses too much on getting stuff done rather than finding the best design.</p>
+<p>The only place where he uses this approach is when fixing bugs. This means that he'll write a test that reproduces the bug and fails, and only then will he start with the implementation of the fix.
+Now, if the test passes, one can be sure that the bug is fixed.</p>
+<p><strong>Design patterns</strong></p>
+<p>According to Ousterhout, a design pattern is a commonly used approach for solving a particular problem.
+He finds that one should use the patterns when it makes sense because it would be hard to devise a better solution yourself. However, he warns that one should not try to force it and that a custom approach
+is preferred if it is cleaner.</p>
+<p><strong>Getters and Setters</strong></p>
+<p>Getters and setters are a popular design pattern in software design, especially within the Java programming community. He finds that getters and setters can make sense if one must expose an instance variable. However, he argues that one should be wary of exposing instance variables in the first place since this means that a part of the class's implementation is leaked, violating the idea of information hiding.</p>
+<p>He also argues that getters and setters typically are shallow because they are often just one line. They add clutter to the class interface without providing much functionality. Therefore, he believes one should avoid getters and setters as much as possible.</p>
+<h2 id="chapter-20-design-for-performance"><a href="#chapter-20-design-for-performance" aria-hidden="true"><span class="icon icon-link"></span></a>Chapter 20 Design for Performance</h2>
+<p>In this chapter, Ousterhout discusses how to achieve high performance without sacrificing clean design.</p>
+<p><strong>How to think about performance</strong></p>
+<p>Ousterhout suggests that, one should neither try to optimize for maximum speed nor completely ignore it. This is because an approach for maximum speed will likely slow down development while ignoring performance
+completely will likely lead to many inefficiencies, which will be hard to fix.</p>
+<p>Hence, he suggests to use the middle road of these two approaches.</p>
+<p><strong>Measure before modifying</strong></p>
+<p>Ousterhout observes that, it is tempting to make performance tweaks based on intuition. He argues that one should avoid doing this because intuition can be unreliable. Instead, he suggests measuring the system's existing behavior before trying to fix it.</p>
+<p>This will have the benefit of identifying the places where performance tuning will have the most impact while also ensuring that the performance tweak actually improves performance.</p>
+<p>He also believes there is no need to retain complex changes if they do not improve performance significantly.</p>
+<p><strong>Design around the critical path</strong></p>
+<p>When fixing performance issues, the first question one should ask oneself
+what is the smallest amount of code that must be executed to achieve the desired outcome.
+Also, one should focus on something other than special cases when fixing performance issues. When performance is an issue, one should minimize the number of special cases that must be checked. Ideally, this check should be done at the end, where the special cases can then be handled.</p>
+<p>Since performance is less critical for special cases, one should focus on lowering the case's complexity instead of worrying about performance.</p>
+<p><strong>Conclusion</strong></p>
+<p>Ousterhout concludes that one should focus on simplicity when trying to create fast code, because slow code tends to be slow because it does unnecessary work. He finds that simple code often is fast enough, and
+therefore, one does not have to worry about performance much in the first place.</p>
+<h2 id="chapter-21-conclusion"><a href="#chapter-21-conclusion" aria-hidden="true"><span class="icon icon-link"></span></a>Chapter 21 Conclusion</h2>
+<p>In this chapter, Ousterhout gives a summary of the topics that were discussed in this book. He also reiterates that this book is all about one thing: complexity. </p>
+</div><div class="mb-8"><a href="/blog" class="font-bold uppercase">Back to Blog</a></div></div></main><footer class="text-white"><div class="container mx-auto flex flex-col lg:flex-row items-center justify-between py-8"><div class="mb-8 lg:mb-0"><div>
+          Copyright 2023. All rights reserved.
+        </div><div><a href="/rss.xml" class="text-white hover:text-gray-400 font-normal">RSS Feed</a>
+          |
+          <a href="/sitemap.xml" class="text-white hover:text-gray-400 font-normal">Sitemap</a></div></div><ul class="flex items-center space-x-8"><li><a href="mailto:carsten.behrens1@gmail.com" title="Email" class="text-white hover:text-gray-400"><svg width="25" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0h20A2.5 2.5 0 0 1 25 2.5v15a2.5 2.5 0 0 1-2.5 2.5h-20A2.5 2.5 0 0 1 0 17.5v-15C0 1.125 1.125 0 2.5 0zm20 4.225V2.5h-20v1.725l10 5 10-5zm0 2.8l-9.438 4.713a1.25 1.25 0 0 1-1.124 0L2.5 7.025V17.5h20V7.025z" fill-rule="nonzero"></path></svg></a></li><li><a href="https://github.com/carstenbehrens" target="_blank" title="Github" class="text-white hover:text-gray-400"><svg width="20" height="19" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M10 0c1.814 0 3.487.435 5.02 1.306a9.827 9.827 0 0 1 3.639 3.542A9.33 9.33 0 0 1 20 9.734c0 2.121-.636 4.03-1.908 5.723a9.783 9.783 0 0 1-4.928 3.518c-.234.042-.408.012-.52-.09a.49.49 0 0 1-.17-.38l.006-.969c.005-.621.007-1.19.007-1.705 0-.82-.226-1.42-.677-1.8.495-.05.94-.126 1.335-.228a5.4 5.4 0 0 0 1.223-.494 3.62 3.62 0 0 0 1.055-.843c.282-.334.512-.777.69-1.33.178-.554.267-1.19.267-1.909a3.7 3.7 0 0 0-1.028-2.61c.32-.77.286-1.631-.105-2.586-.243-.076-.594-.03-1.054.14-.46.168-.86.354-1.198.557l-.495.304a9.478 9.478 0 0 0-2.5-.33c-.86 0-1.693.11-2.5.33a11.6 11.6 0 0 0-.553-.342c-.23-.135-.593-.298-1.088-.488-.494-.19-.863-.247-1.106-.171-.391.955-.426 1.816-.105 2.585A3.7 3.7 0 0 0 3.62 9.227c0 .719.089 1.352.267 1.902.178.549.406.993.683 1.33.278.339.627.622 1.048.85a5.4 5.4 0 0 0 1.224.494c.395.102.84.178 1.335.228-.338.305-.551.74-.638 1.306a2.631 2.631 0 0 1-.586.19 3.782 3.782 0 0 1-.742.063c-.287 0-.57-.09-.853-.272a2.256 2.256 0 0 1-.723-.792 2.068 2.068 0 0 0-.631-.66c-.256-.168-.471-.27-.645-.304l-.26-.038c-.182 0-.308.02-.378.057-.07.038-.09.087-.065.146.026.06.065.118.117.178.053.059.109.11.17.152l.09.063c.192.085.38.245.567.482.187.236.324.452.41.646l.13.292c.113.32.304.58.574.78.269.198.56.325.872.38.312.054.614.084.905.088.29.004.532-.01.723-.044l.299-.05c0 .32.002.694.007 1.12l.006.692a.49.49 0 0 1-.17.38c-.112.101-.286.13-.52.089a9.783 9.783 0 0 1-4.928-3.518C.636 13.763 0 11.855 0 9.734a9.33 9.33 0 0 1 1.341-4.886 9.827 9.827 0 0 1 3.64-3.542C6.512.436 8.185 0 10 0zM3.79 13.98c.025-.058-.005-.11-.092-.151-.087-.026-.143-.017-.17.025-.025.06.005.11.092.152.078.05.134.042.17-.025zm.403.432c.06-.043.052-.11-.026-.203-.087-.076-.157-.089-.209-.038-.06.042-.052.11.026.203.087.084.157.097.209.038zm.39.57c.078-.06.078-.14 0-.24-.07-.11-.143-.136-.221-.077-.078.042-.078.118 0 .228.078.11.152.14.221.089zm.547.532c.07-.067.052-.148-.052-.24-.104-.102-.19-.115-.26-.039-.078.068-.061.148.052.241.104.102.19.114.26.038zm.742.317c.026-.093-.03-.16-.169-.203-.13-.033-.213-.004-.247.09-.035.092.021.155.169.19.13.05.213.025.247-.077zm.82.064c0-.11-.073-.157-.22-.14-.14 0-.209.047-.209.14 0 .11.074.156.221.139.14 0 .209-.046.209-.14zm.756-.127c-.017-.093-.096-.131-.234-.114-.14.025-.2.088-.183.19.018.101.096.135.235.101.139-.034.2-.093.182-.177z" fill-rule="nonzero"></path></svg></a></li><li><a href="https://twitter.com/cabe_mono" target="_blank" title="Twitter" class="text-white hover:text-gray-400"><svg width="20" height="17" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19.807 1.943a8.588 8.588 0 0 1-2.036 2.135 11.918 11.918 0 0 1-.465 3.854 12.085 12.085 0 0 1-1.452 3.177 12.426 12.426 0 0 1-2.318 2.691c-.897.78-1.978 1.402-3.243 1.867-1.265.464-2.618.697-4.06.697-2.27 0-4.348-.618-6.233-1.854.293.034.62.051.98.051 1.885 0 3.565-.588 5.04-1.764a3.915 3.915 0 0 1-2.363-.825 4.038 4.038 0 0 1-1.432-2.039c.276.043.532.064.766.064.36 0 .717-.047 1.068-.14A3.982 3.982 0 0 1 1.73 8.43c-.617-.754-.925-1.63-.925-2.627v-.051c.57.324 1.182.498 1.835.524a4.1 4.1 0 0 1-1.32-1.47 4.078 4.078 0 0 1-.49-1.969c0-.75.185-1.445.553-2.084a11.548 11.548 0 0 0 3.702 3.05 11.163 11.163 0 0 0 4.669 1.271c-.067-.324-.1-.639-.1-.946 0-1.142.395-2.116 1.187-2.92C11.632.402 12.589 0 13.712 0c1.173 0 2.161.435 2.966 1.304a7.878 7.878 0 0 0 2.576-.997 3.997 3.997 0 0 1-1.785 2.275 7.98 7.98 0 0 0 2.338-.639z" fill-rule="nonzero"></path></svg></a></li></ul></div></footer><div style="display:none"><svg id="dots-triangle" width="170" height="170" xmlns="http://www.w3.org/2000/svg"><path d="M168.152 170a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm-18.478-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0 18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm-18.478 0a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.479a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm-18.479 0a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0 18.479a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0 18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-55.435a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zM94.24 133.043a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0 18.479a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0 18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-55.435a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm-18.478 36.956a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0 18.479a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0 18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-55.435a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm-18.478 55.434a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0 18.479a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0 18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-55.435a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.479a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm-18.479 73.913a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0 18.479a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0 18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-55.435a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.479a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0-18.478a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm-18.478 92.391a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0 18.479a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0 18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-55.435a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.479a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0-18.478a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zM1.848 133.044a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.695zm0 18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0 18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-55.435a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.479a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0-18.478a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696z" fill="#1E40AF" fill-rule="evenodd" opacity=".503"></path></svg></div></div>
+    <script src="/assets/js/app.06a24c84.js" defer></script><script src="/assets/js/page--src--templates--post-vue.2807f3b2.js" defer></script>
+  </body>
+</html>
