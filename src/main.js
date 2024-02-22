@@ -29,4 +29,10 @@ export default function(Vue, { router, head, isClient }) {
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css?family=Nunito+Sans:400,700",
   });
+
+  head.script.push({
+    src: 'https://plausible.io/js/script.js',
+    defer: true,
+    "data-domain": "carstenbehrens.com",
+  })
 }

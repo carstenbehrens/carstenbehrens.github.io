@@ -10,12 +10,6 @@ module.exports = {
   siteUrl: "https://carstenbehrens.com",
   plugins: [
     {
-      use: "@gridsome/plugin-google-analytics",
-      options: {
-        id: "UA-145491403-1",
-      },
-    },
-    {
       use: "gridsome-plugin-tailwindcss",
     },
     {
